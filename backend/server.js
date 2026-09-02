@@ -21,11 +21,19 @@ mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
         console.log("MongoDB connected successfully");
-
-        app.listen(process.env.PORT, () => {
-            console.log(`Server running on http://localhost:${process.env.PORT}`);
-        });
     })
     .catch((error) => {
         console.log("MongoDB connection failed:", error.message);
     });
+
+// Export app for Vercel
+module.exports = app;
+
+// Local development
+if (require.main === module) {
+    app.listen(process.env.PORT || 5000, () => {
+        console.log(
+            `Server running on http://localhost:${process.env.PORT || 5000}`
+        );
+    });
+}
