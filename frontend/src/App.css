@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+.header {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.header h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+.header p {
+    margin: 0;
+    color: #ddd;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+}
+
+.forms-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #444;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.message {
+    margin-top: 15px;
+    padding: 10px;
+    background: #e8f5e9;
+    color: #267333;
+    border-radius: 6px;
+}
+
+.posts-section {
+    margin-top: 40px;
+}
+
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.posts-header h2 {
+    margin: 0;
+}
+
+.refresh-btn {
+    margin: 0;
+}
+
+.post-card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.post-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.content {
+    line-height: 1.6;
+    color: #555;
+}
+
+.user-info {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f3f5;
+    border-radius: 6px;
+}
+
+.user-info strong {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    margin: 6px 0;
+}
+
+.post-card small {
+    display: block;
+    margin-top: 15px;
+    color: #888;
+}
+
+.empty {
+    background: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+    .forms-container {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .container {
+        width: 95%;
+    }
+}
